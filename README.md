@@ -1,5 +1,5 @@
 # bec-coherence-time
-Calculates the coherence time distribution of a Bose-Einstein condensate
+Calculates the coherence time distribution of a Bose-Einstein condensate.
 
 
 Markov sampling method (generalised Metropolis-Hastings sampling algorithm) for calculating the 
