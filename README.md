@@ -2,7 +2,7 @@
 Calculates the coherence time distribution of a Bose-Einstein condensate.
 
 
-Markov sampling method (generalised Metropolis-Hastings sampling algorithm) for calculating the 
+Markov sampling method (Metropolis-Hastings sampling algorithm) for calculating the 
 coherence time (distribution) of the order parameter for a given total particle number, 
 temperature and trap frequency of a Bose-Einstein condensate.
 
