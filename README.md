@@ -27,4 +27,4 @@ For proper installation, please replace the path '/your-installation-path/' with
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-  In order to become sponsor of the project, you may simply apply for sponsorship at support@krealix.de.
+  In order to become sponsor of the project, you may apply for sponsorship at support@krealix.de.
