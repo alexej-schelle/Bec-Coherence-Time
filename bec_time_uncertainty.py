@@ -13,8 +13,6 @@
 #   temperature and trap frequency of a Bose-Einstein condensate.
 #
 #   This software version corresponds to publication of Fluctuation and Noise Letters, Vol. 16, No. 01, 1750009 (2017).
-#  
-#   For proper installation, please replace the path '/your-installation-path/' with your installation path in the lines 176 - 181 of this code.
 #
 #  * :
 # 
