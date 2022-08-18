@@ -37,7 +37,6 @@
 #
 ############################################################################################################################################################################
 
-
 import os
 import sys
 import math
@@ -48,14 +47,17 @@ import pylab
 import matplotlib.pyplot as plt
 import operator
 
+maxmode = 500 # Typical mode size for analysis : 50 - 2500 modes.
+ptn = 1000 # Typical particle number : 10^3 - 10^5
+sample = 1000 # Typical sample size : 10^5 - 10^8
 
-maxmode = 100 # Typical mode size for analysis : 50 - 500 modes.
-ptn = 2000 # Typical particle number : 10^3 - 10^5
-sample = 25000 # Typical sample size : 10^5 - 10^8
+omx = 2.0*math.pi*42.0 # Trap frequency in x direction
+omy = 2.0*math.pi*42.0 # Trap frequency in y direction 
+omz = 2.0*math.pi*120.0 # Trap frequency in z direction
 
-omx = 2.0*math.pi*25.0 # Trap frequency in x direction
-omy = 2.0*math.pi*75.0 # Trap frequency in y direction 
-omz = 2.0*math.pi*125.0 # Trap frequency in z direction
+# omx = 2.0*math.pi*50.0 # Trap frequency in x direction
+# omy = 2.0*math.pi*75.0 # Trap frequency in y direction 
+# omz = 2.0*math.pi*125.0 # Trap frequency in z direction
 
 start_temp = 10.0 # in units of nK
 
@@ -84,8 +86,9 @@ pols = ['']*maxmode
 x = ['']*ptn
 y = ['']*ptn
 
-mu_x = [] # collect the real part of the integrated wave field
-mu_y = [] # collect the real part of the integrated wave field
+mu_x = [] # Collect the real part of two-dimensional complex time.
+mu_y = [] # Collect the imaginary part of two-dimensional complex time.
+mu_abs = [] # Collect the absolute value of two-dimensional complex time.
 
 for l in range(1, sample):
           
@@ -95,7 +98,7 @@ for l in range(1, sample):
     
     mu = 0.0
     norm = 0.0
-    
+        
     print 'Sample step Nr. ' + str(l)
                   
     for k in range(1, maxmode):
@@ -137,7 +140,7 @@ for l in range(1, sample):
             
                 phase_0 = math.atan(x[k].imag/x[k].real)
         
-	    if (operator.iand(operator.lt(x[k].real,0.0),operator.ge(x[k].imag,0.0))):
+    	    if (operator.iand(operator.lt(x[k].real,0.0),operator.ge(x[k].imag,0.0))):
             
                 phase_0 = math.atan(x[k].imag/x[k].real) + math.pi
     
@@ -145,35 +148,50 @@ for l in range(1, sample):
 	            
                 phase_0 = math.atan(x[k].imag/x[k].real) - math.pi
     
-	    if (operator.iand(operator.eq(x[k].real,0.0),operator.gt(x[k].imag,0.0))):
+            if (operator.iand(operator.eq(x[k].real,0.0),operator.gt(x[k].imag,0.0))):
             
                 phase_0 = 0.5*math.pi
 
-	    if (operator.iand(operator.eq(x[k].real,0.0),operator.lt(x[k].imag,0.0))):
+            if (operator.iand(operator.eq(x[k].real,0.0),operator.lt(x[k].imag,0.0))):
             
                 phase_0 = -0.5*math.pi
         	       
     	mu += x[k]*p[k] # Random amplitudes times phases
         
-    	if operator.ne(phase_0,0.0):
+        if operator.ne(phase_0,0.0):
     	
-    	   prob += complex(0.5*p[k]*p[k]*math.log(math.fabs(x[k].real**2 + x[k].imag**2)), p[k]*p[k]*phase_0) # Calculate transition probability
+    	    prob += complex(0.5*p[k]*p[k]*math.log(math.fabs(x[k].real**2 + x[k].imag**2)), p[k]*p[k]*phase_0) # Calculate transition probability
     	
-    	prob = math.sqrt(prob.real**2 + prob.imag**2) 
-    	    	 
+        mu_x.append(prob.real/(omx+omy+omz)/0.5*1.0E3)
+        mu_y.append(prob.imag/(omx+omy+omz)/0.5*1.0E3)
+
+        prob = math.sqrt(prob.real**2 + prob.imag**2)
+
     if (operator.gt(min((math.exp(prob))/(math.exp(mu_start)),1.00),random.uniform(0.00,1.00))): # Condition for transition to another state at equilibrium
  
         mu_start = prob
-	z_start = z
-	drop = 0
-	
-    if (operator.ne(drop,1)):	
-		
-        mu_x.append(prob.real) 
-                      												    							    							   	    	                            												    							    							   	    	  
+        z_start = z
+        drop = 0
+        
+        mu_abs.append(prob/(omx+omy+omz)/0.5*1.0E3)
+        
 plt.figure(1)
-plt.hist(mu_x, bins = 300, normed = True)
-plt.tick_params(axis='both', which='major', labelsize = 16)
-plt.xlabel('$\tau$', fontsize = 18)
-plt.ylabel('$\pi_e[\tau]$', fontsize = 18)
-plt.savefig('/Users/AS_Scientific_Analytics/Desktop/bec_time_distribution/fig_field_modes.png')
+plt.hist(mu_x, bins = 500, normed = True)
+plt.tick_params(axis='both', which='major', labelsize = 14)
+plt.xlabel('$t_1 [ms] $', fontsize = 18)
+plt.ylabel('$\pi[t_1]$', fontsize = 18)
+plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_1.png')
+
+plt.figure(2)
+plt.hist(mu_y, bins = 500, normed = True)
+plt.tick_params(axis='both', which='major', labelsize = 14)
+plt.xlabel('$t_2 [ms] $', fontsize = 18)
+plt.ylabel('$\pi[t_2]$', fontsize = 18)
+plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_2.png')
+
+plt.figure(3)
+plt.hist(mu_abs, bins = 500, normed = True)
+plt.tick_params(axis='both', which='major', labelsize = 14)
+plt.xlabel('$t [ms] $', fontsize = 18)
+plt.ylabel('$\pi[t]$', fontsize = 18)
+plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_3.png')
