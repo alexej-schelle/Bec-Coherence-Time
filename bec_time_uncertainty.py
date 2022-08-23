@@ -19,6 +19,9 @@
 #   License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren 
 #   License Type :      MIT license (2017)
 #   License Contact:    E-Mail : alexej.schelle@gmail.com
+#
+#   Free support is provided per email at support@krealix.de.   
+#   For more explicit consulting and discussions, please schedule a meeting at https://calendly.com/alexej-schelle/.  
 # 
 #   ** : 
 #
