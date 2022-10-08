@@ -1,10 +1,8 @@
 # bec-coherence-time
-Calculates the coherence time distribution of a Bose-Einstein condensate.
 
+Calculates the coherence time distribution of a quantum particle in a Bose-Einstein condensate.
 
-Markov sampling method (Metropolis sampling algorithm) for calculating the 
-coherence time (distribution) of the order parameter for a given total particle number, 
-temperature and trap frequency of a Bose-Einstein condensate.
+Markov sampling method (Metropolis sampling algorithm) for calculating the coherence time (distribution) of the condensate and non-condensate order parameter(s) for a given total particle number, temperature and trap frequency of a Bose-Einstein condensate.
 
 For proper installation, please replace the path '/your-installation-path/' with your installation path in the lines 176 - 181 of this code.
 
