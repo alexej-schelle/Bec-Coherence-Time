@@ -8,9 +8,9 @@ For proper installation, please replace the path '/your-installation-path/' with
 
 -1- :
  
-  License Copyright:  Dr. A. Schelle, Sudetenstr. 76, 87600 Kaufbeuren 
-  License Type :      MIT license (2021)
-  License Contact:    E-Mail : alexej.schelle@gmail.com
+   License Copyright :  Dr. A. Schelle, Bachschmidstr. 4, 87600 Kaufbeuren
+   License Type :       MIT License (2021)
+   License Contact :    E-Mail : alexej.schelle@gmail.com
  
 -2- : 
 
