@@ -1,4 +1,4 @@
-# bec-coherence-time
+# Coherence time of a quantum field created by an ideal Bose gas 
 
 Calculates the coherence time distribution of a quantum particle in a Bose-Einstein condensate.
 
@@ -15,7 +15,7 @@ For proper installation, please replace the path '/your-installation-path/' with
 -2- : 
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
-  (the "Software" bec_symmetry_breaking.py), to deal in the Software without restriction, including without limitation the rights to use, 
+  (the "Software" BecCoherenceTime.py), to deal in the Software without restriction, including without limitation the rights to use, 
   copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
   furnished to do so, subject to the following conditions:
  
