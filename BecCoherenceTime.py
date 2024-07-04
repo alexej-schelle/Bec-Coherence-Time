@@ -20,7 +20,7 @@
 #   License Type :      MIT license (2017)
 #   License Contact:    E-Mail : alexej.schelle@gmail.com
 #
-#   Free support is provided per email at support@krealix.de.   
+#   Free support is provided per email at alexej.schelle@gmail.com.   
 #   For more explicit consulting and discussions, please schedule a meeting at https://calendly.com/alexej-schelle/.  
 # 
 #   ** : 
@@ -183,18 +183,18 @@ plt.hist(mu_x, bins = 500, normed = True)
 plt.tick_params(axis='both', which='major', labelsize = 14)
 plt.xlabel('$t_1 [ms] $', fontsize = 18)
 plt.ylabel('$\pi[t_1]$', fontsize = 18)
-plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_1.png')
+plt.savefig('/.../fig_field_modes_1.png')
 
 plt.figure(2)
 plt.hist(mu_y, bins = 500, normed = True)
 plt.tick_params(axis='both', which='major', labelsize = 14)
 plt.xlabel('$t_2 [ms] $', fontsize = 18)
 plt.ylabel('$\pi[t_2]$', fontsize = 18)
-plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_2.png')
+plt.savefig('/.../fig_field_modes_2.png')
 
 plt.figure(3)
 plt.hist(mu_abs, bins = 500, normed = True)
 plt.tick_params(axis='both', which='major', labelsize = 14)
 plt.xlabel('$t [ms] $', fontsize = 18)
 plt.ylabel('$\pi[t]$', fontsize = 18)
-plt.savefig('/Users/dr.a.schelle/Desktop/coherence_time_publication/pub_bec_coherence_time/bec_time_distribution/fig_field_modes_3.png')
+plt.savefig('/.../fig_field_modes_3.png')
