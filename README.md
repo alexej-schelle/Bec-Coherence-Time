@@ -1,30 +1,33 @@
-# Coherence time of a quantum field created by an ideal Bose gas 
+# GAN-Modell zur Verschlüsselung von E-Mail Textnachrichten 
+Markov sampling software (Metropolis sampling algorithm) for calculating the coherence time (distribution) of the condensate and non-condensate order parameter(s) for a given total particle number, temperature and trap frequency of a Bose-Einstein condensate.
 
-Calculates the coherence time distribution of a quantum particle in a Bose-Einstein condensate.
 
-Markov sampling method (Metropolis sampling algorithm) for calculating the coherence time (distribution) of the condensate and non-condensate order parameter(s) for a given total particle number, temperature and trap frequency of a Bose-Einstein condensate.
+# Installation unter Linux und Mac Betriebssystemen
+**************************************************************************************************************************************
+    git clone https://github.com/alexej-schelle/BecCoherenceTime.git and start the software with the corresponding Python files
+**************************************************************************************************************************************
 
-For proper installation, please replace the path '/your-installation-path/' with your installation path in the lines 176 - 181 of this code.
+# Installation unter Windows Betriebssystemen
+**************************************************************************************************************************************
+    Download files at https://github.com/alexej-schelle/BecCoherenceTime/ and start the software with the corresponding Python files
+**************************************************************************************************************************************
 
--1- :
- 
-   License Copyright :  Dr. A. Schelle, Bachschmidstr. 4, 87600 Kaufbeuren
-   License Type :       MIT License (2021)
-   License Contact :    E-Mail : alexej.schelle@gmail.com
- 
--2- : 
+# Dokumentation unter Linux, Mac und Windows Betriebssystemen
+**************************************************************************************************************************************
+    git clone https://github.com/alexej-schelle/BecCoherenceTime.git and read docs/README.txt
+**************************************************************************************************************************************
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
-  (the "Software" BecCoherenceTime.py), to deal in the Software without restriction, including without limitation the rights to use, 
-  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice -1- and this permission notice -2- shall be included in all copies or substantial portions of the Software.
- 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# Dokumentierte Anwendungsszenarien
+***********************************************************************************************************************************************************************************************
 
--3- : Free support is provided per email at alexej.schelle@gmail.com. 
-   
--4- : For more explicit consulting and discussions, please schedule a meeting at https://calendly.com/alexej-schelle/.  
+    Please visit https://www.iu.org/ or ask at alexej.schelle.ext@iu.org.
+
+***********************************************************************************************************************************************************************************************
+
+# Autoren
+
+*********************************************************************************************************************
+
+   - FH-Doz. Dr. A. Schelle.
+  
+*********************************************************************************************************************
