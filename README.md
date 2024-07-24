@@ -1,4 +1,4 @@
-# GAN-Modell zur Verschlüsselung von E-Mail Textnachrichten 
+# Coherence time of a Bose-Einstein condensate 
 Markov sampling software (Metropolis sampling algorithm) for calculating the coherence time (distribution) of the condensate and non-condensate order parameter(s) for a given total particle number, temperature and trap frequency of a Bose-Einstein condensate.
 
 
